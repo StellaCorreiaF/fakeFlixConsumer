@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/movies?genre_id=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=0pSsdOVFZLCeF7yUDSrRyx8OgrgYAUMW
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"275c4f262097b7dcf5037192cfdf5b1e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cb383d35-ab95-4562-832a-8ae740fb3038
+      X-Runtime:
+      - '0.009850'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.16, sql.active_record;dur=1.97, instantiation.active_record;dur=0.28,
+        render_collection.action_view;dur=0.73, render_template.action_view;dur=3.23,
+        process_action.action_controller;dur=6.75
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjQsInRpdGxlIjoiQW50ZXMgZG8gQW1hbmhlY2VyIiwiZHVyYXRpb24iOjEwNSwieWVhciI6MTk5NSwicmVzdW1lIjoiSmVzc2UsIHVtIGpvdmVtIGFtZXJpY2FubywgZSBDZWxpbmUsIHVtYSBsaW5kYSBmcmFuY2VzYSwgc2UgY29uaGVjZW0gbm8gdHJlbSBwYXJhIFBhcmlzLCBlIGNvbWXDp2FtIHVtYSBjb252ZXJzYSBxdWUgb3MgbGV2YSBhIGZhemVyIHVtYSBlc2NhbGEgZW0gVmllbmEgZSBmaWNhciB1bSBwb3VjbyBtYWlzIGp1bnRvcywgc2VtIGltYWdpbmFyIG8gcXVlIG8gZGVzdGlubyBvcyByZXNlcnZhLiIsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTI5VDE5OjQ2OjIzLjEzMloiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0yOVQxOTo0NjoyMy42NzVaIiwidXJsIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL21vdmllcy80Lmpzb24ifSx7ImlkIjo1LCJ0aXRsZSI6IlRpdGFuaWMiLCJkdXJhdGlvbiI6bnVsbCwieWVhciI6bnVsbCwicmVzdW1lIjpudWxsLCJjcmVhdGVkX2F0IjoiMjAyMy0wMy0yOVQxOTo1MjozNi44MzBaIiwidXBkYXRlZF9hdCI6IjIwMjMtMDMtMjlUMTk6NTI6MzcuMzA5WiIsInVybCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9tb3ZpZXMvNS5qc29uIn1d
+  recorded_at: Wed, 29 Mar 2023 22:01:08 GMT
+recorded_with: VCR 6.1.0

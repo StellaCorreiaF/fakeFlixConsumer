@@ -75,8 +75,7 @@ RSpec.describe FakeFlixConsumer::Client do
                              FakeFlixConsumer::Movie.new(
                                title: "Titanic",
                                genre_id: 2
-                             ),
-
+                             )
                            ]
     end
   end

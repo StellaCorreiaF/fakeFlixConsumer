@@ -10,7 +10,7 @@ RSpec.describe FakeFlixConsumer::Client do
           id: 1,
           title: "O Auto da Compadecida",
 
-          )
+        )
       end
     end
   end
@@ -66,17 +66,19 @@ RSpec.describe FakeFlixConsumer::Client do
 
   describe "#list_movies_by_genre" do
     it "lista filmes por genero" do
-      movies = client.list_movies_by_genre(2)
-      expect(movies).to eq [
-                             FakeFlixConsumer::Movie.new(
-                               title: "Antes do Amanhecer",
-                               genre_id: 2
-                             ),
-                             FakeFlixConsumer::Movie.new(
-                               title: "Titanic",
-                               genre_id: 2
-                             )
-                           ]
+      VCR.use_cassette("list_by_genre") do
+        movies = client.list_movies_by_genre(2)
+        expect(movies).to eq [
+                               FakeFlixConsumer::Movie.new(
+                                 title: "Antes do Amanhecer",
+                                 genre_id: 2
+                               ),
+                               FakeFlixConsumer::Movie.new(
+                                 title: "Titanic",
+                                 genre_id: 2
+                               )
+                             ]
+      end
     end
   end
 end

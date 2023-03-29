@@ -8,9 +8,9 @@ RSpec.describe FakeFlixConsumer::Client do
 
         expect(movie).to eq FakeFlixConsumer::Movie.new(
           id: 1,
-          title: "O Auto da compadecida",
+          title: "O Auto da Compadecida",
 
-        )
+          )
       end
     end
   end
@@ -30,7 +30,19 @@ RSpec.describe FakeFlixConsumer::Client do
                              ), FakeFlixConsumer::Movie.new(
                              id: 3,
                              title: "Django Livre"
-                           )
+                           ),
+                             FakeFlixConsumer::Movie.new(
+                               id: 4,
+                               title: "Antes do Amanhecer"
+                             ),
+                             FakeFlixConsumer::Movie.new(
+                               id: 5,
+                               title: "Titanic"
+                             ),
+                             FakeFlixConsumer::Movie.new(
+                               id: 6,
+                               title: "Lisbela e o Prisioneiro"
+                             ),
                            ]
 
       end
@@ -39,13 +51,13 @@ RSpec.describe FakeFlixConsumer::Client do
 
   describe "#createMovie" do
     it "cadastra um fime" do
-      VCR.use_cassette("list") do
+      VCR.use_cassette("create") do
         movie = client.create_movie(
-          title: "Titanic",
-          director_id: 3,
-          genre_id: 2
+          title: "O Bem-Amado",
+          director_id: 4,
+          genre_id: 4
         )
-        expect(movie.title).to eq "Titanic"
+        expect(movie.title).to eq "O Bem-Amado"
         expect(movie.id).to_not eq nil
       end
     end
@@ -56,6 +68,10 @@ RSpec.describe FakeFlixConsumer::Client do
     it "lista filmes por genero" do
       movies = client.list_movies_by_genre(2)
       expect(movies).to eq [
+                             FakeFlixConsumer::Movie.new(
+                               title: "Antes do Amanhecer",
+                               genre_id: 2
+                             ),
                              FakeFlixConsumer::Movie.new(
                                title: "Titanic",
                                genre_id: 2

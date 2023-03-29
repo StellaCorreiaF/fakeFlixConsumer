@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/movies
+    body:
+      encoding: UTF-8
+      string: '{"movie":{"title":"O Bem-Amado","genre_id":4,"director_id":4}}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=Zr9Hvh4nPe8kXc8A0Yu5AbZfDUeHYeq8
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - http://localhost:3000/movies/7
+      Vary:
+      - Accept
+      Etag:
+      - W/"afa57be480def23288207cdb2bb203da"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 87b9b3d5-54b9-4b4e-bb64-9179e2cba523
+      X-Runtime:
+      - '0.016462'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.18, sql.active_record;dur=8.31, instantiation.active_record;dur=0.11,
+        enqueue.active_job;dur=0.56, render_partial.action_view;dur=0.26, render_template.action_view;dur=0.66,
+        process_action.action_controller;dur=13.71
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":7,"title":"O Bem-Amado","duration":null,"year":null,"resume":null,"created_at":"2023-03-29T19:59:23.569Z","updated_at":"2023-03-29T19:59:23.569Z","url":"http://localhost:3000/movies/7.json"}'
+  recorded_at: Wed, 29 Mar 2023 19:59:23 GMT
+recorded_with: VCR 6.1.0

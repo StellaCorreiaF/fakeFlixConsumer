@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/movies/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=Zr9Hvh4nPe8kXc8A0Yu5AbZfDUeHYeq8
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"deeba1cb33cbf52b03c4f1c7e5f11b17"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8b55c393-a9c6-4a7f-862e-cffa932511f9
+      X-Runtime:
+      - '0.007711'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.26, sql.active_record;dur=1.36, instantiation.active_record;dur=0.15,
+        render_partial.action_view;dur=0.59, render_template.action_view;dur=1.13,
+        process_action.action_controller;dur=4.77
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MSwidGl0bGUiOiJPIEF1dG8gZGEgQ29tcGFkZWNpZGEiLCJkdXJhdGlvbiI6MTA0LCJ5ZWFyIjoyMDAwLCJyZXN1bWUiOiJBcyBhdmVudHVyYXMgZGUgSm/Do28gR3JpbG8gZSBDaGljw7MsIGRvaXMgbm9yZGVzdGlub3MgcG9icmVzIHF1ZSB2aXZlbSBkZSBnb2xwZXMgcGFyYSBzb2JyZXZpdmVyLiBFbGVzIGVzdMOjbyBzZW1wcmUgZW5nYW5hbmRvIG8gcG92byBkZSB1bSBwZXF1ZW5vIHZpbGFyZWpvLCBpbmNsdXNpdmUgbyB0ZW1pZG8gY2FuZ2FjZWlybyBTZXZlcmlubyBkZSBBcmFjYWp1LCBxdWUgb3MgcGVyc2VndWUgcGVsYSByZWdpw6NvLiIsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTI5VDE0OjIxOjUwLjQ2NFoiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0yOVQxOTo0MToyMy4xMDVaIiwidXJsIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL21vdmllcy8xLmpzb24ifQ==
+  recorded_at: Wed, 29 Mar 2023 19:58:42 GMT
+recorded_with: VCR 6.1.0

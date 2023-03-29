@@ -8,7 +8,7 @@ RSpec.describe FakeFlixConsumer::Client do
 
         expect(movie).to eq FakeFlixConsumer::Movie.new(
           id: 1,
-          title: "O auto da compadecida",
+          title: "O Auto da compadecida",
 
         )
       end
@@ -22,7 +22,7 @@ RSpec.describe FakeFlixConsumer::Client do
         expect(list).to eq [
                              FakeFlixConsumer::Movie.new(
                                id: 1,
-                               title: "O auto da compadecida"
+                               title: "O Auto da Compadecida"
                              ),
                              FakeFlixConsumer::Movie.new(
                                id: 2,
@@ -39,14 +39,15 @@ RSpec.describe FakeFlixConsumer::Client do
 
   describe "#createMovie" do
     it "cadastra um fime" do
-      movie = client.create_movie(
-        title: "Titanic",
-        director_id: 3,
-        genre_id: 2
-      )
-      expect(movie.title).to eq "Titanic"
-      expect(movie.id).to_not eq nil
-
+      VCR.use_cassette("list") do
+        movie = client.create_movie(
+          title: "Titanic",
+          director_id: 3,
+          genre_id: 2
+        )
+        expect(movie.title).to eq "Titanic"
+        expect(movie.id).to_not eq nil
+      end
     end
 
   end
@@ -55,11 +56,12 @@ RSpec.describe FakeFlixConsumer::Client do
     it "lista filmes por genero" do
       movies = client.list_movies_by_genre(2)
       expect(movies).to eq [
-                           FakeFlixConsumer::Movie.new(
-                             title: "Titanic",
-                             genre_id: 2
-                         )
-                         ]
+                             FakeFlixConsumer::Movie.new(
+                               title: "Titanic",
+                               genre_id: 2
+                             ),
+
+                           ]
     end
   end
 end

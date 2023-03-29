@@ -18,7 +18,6 @@ module FakeFlixConsumer
     def list_movies_by_genre(genre_id)
       list =  request_movies "/movies?genre_id=#{genre_id}"
       list.map { |movie| Movie.new(title: movie['title'], genre_id: movie['genre_id']) }
-
     end
 
 

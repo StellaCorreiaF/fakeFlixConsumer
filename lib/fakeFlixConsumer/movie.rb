@@ -1,11 +1,14 @@
 module FakeFlixConsumer
   class Movie
-    attr_reader :title, :id, :image
+    attr_reader :title, :id, :image, :average, :genre, :director
 
     def initialize(props = {})
       @title = props[:title]
       @id = props[:id]
       @image = props[:image]
+      @average = props[:average]
+      @genre = props[:genre]
+      @director = props[:director]
     end
 
     def == (other_movie)

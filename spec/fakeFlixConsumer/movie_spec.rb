@@ -17,6 +17,4 @@ RSpec.describe FakeFlixConsumer::Movie do
       id: 1, title: "Titanic", image: "https://image.tmdb.org/t/p/original/imcOp1kJsCsAFCoOtY5OnPrFbAf.jpg"
     )
   end
-
-
 end

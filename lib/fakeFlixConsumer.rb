@@ -3,6 +3,8 @@
 require_relative "fakeFlixConsumer/version"
 require_relative "fakeFlixConsumer/movie"
 require_relative "fakeFlixConsumer/client"
+require_relative "fakeFlixConsumer/director"
+require_relative "fakeFlixConsumer/genre"
 
 module FakeFlixConsumer
   class Error < StandardError; end
@@ -20,6 +22,5 @@ module FakeFlixConsumer
     class Configuration
       attr_accessor :fake_flix_host, :api_key
     end
-
   end
 end

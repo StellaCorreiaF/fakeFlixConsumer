@@ -53,15 +53,14 @@ RSpec.describe FakeFlixConsumer::Client do
     it "cadastra um fime" do
       VCR.use_cassette("create") do
         movie = client.create_movie(
-          title: "O Bem-Amado",
-          director_id: 4,
-          genre_id: 4
+          title: "Antes da Meia-Noite",
+          genre_id: 2,
+          director_id: 6,
         )
-        expect(movie.title).to eq "O Bem-Amado"
+        expect(movie.title).to eq "Antes da Meia-Noite"
         expect(movie.id).to_not eq nil
       end
     end
-
   end
 
   describe "#list_movies_by_genre" do

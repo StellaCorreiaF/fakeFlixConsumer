@@ -2,7 +2,7 @@ require 'net/http'
 require 'json'
 module FakeFlixConsumer
   class Client
-    attr_reader :title, :id, :image, :average, :genre, :director
+    attr_reader :title, :id, :image, :average, :genre_id, :director_id
 
     def show_movie(movie_id)
       hash = request "/movies/#{movie_id}"
@@ -20,12 +20,12 @@ module FakeFlixConsumer
       list.map { |movie| Movie.new(title: movie['title'], genre_id: movie['genre_id']) }
     end
 
-    def create_movie(title:, genre:, director:)
+    def create_movie(title:, genre_id:, director_id:)
       result = request "/movies", method: :post, body: {
         movie: {
           title: title,
-          genre: genre,
-          director: director,
+          genre_id: genre_id,
+          director_id: director_id,
         }
       }
       movies_from result

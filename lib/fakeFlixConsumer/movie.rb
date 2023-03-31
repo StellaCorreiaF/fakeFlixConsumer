@@ -1,12 +1,11 @@
 module FakeFlixConsumer
   class Movie
-    attr_reader :title, :id, :image, :average, :genre, :director
+    attr_reader :title, :id, :image,:genre, :director
 
     def initialize(props = {})
       @title = props[:title]
       @id = props[:id]
       @image = props[:image]
-      @average = props[:average]
       @genre = props[:genre]
       @director = props[:director]
     end
